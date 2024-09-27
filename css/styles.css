@@ -1,25 +1,56 @@
-body, html {
-    height: 100%;
-    margin: 0;
-  }
+/* Full-screen background div */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/MartialOdysseyBG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; /* Put the background behind all content */
+}
 
-  /* Full-screen background div */
-  .bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/MartialOdysseyBG.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1; /* Put the background behind all content */
-  }
+/* Styling for the text */
+h1, p {
+  color: black;
+  text-align: center;
+  position: relative;
+}
 
-  /* Styling for the text */
-  h1, p {
-    color: white;
-    text-align: center;
-    position: relative;
-  }
+/* Centered content container */
+.content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Progress bar container */
+.meter-container {
+  width: 30px; /* Width of the vertical progress bar */
+  height: 200px; /* Height of the vertical progress bar */
+  background-color: #555; /* Background color of the bar */
+  border-radius: 25px;
+  position: relative;
+  margin: 20px auto; /* Center horizontally */
+  overflow: hidden; /* Ensure overflow is clipped */
+}
+
+/* Progress bar fill */
+.meter {
+  position: absolute;
+  bottom: 0; /* Start filling from the bottom */
+  width: 100%; /* Full width */
+}
+
+.meter > span {
+  display: block;
+  width: 100%; /* Full width */
+  background-color: rgb(43,194,83);
+  background-image: linear-gradient(
+    to top, /* Fill from bottom to top */
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  border-radius: 25px;
+}

@@ -4,23 +4,121 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
+
         <title>Martial Odyssey - The Game</title>
     </head>
     
     <body>
-        <div class="bg"></div>
-        <h1>Martial Odyssey</h1>
-        <p>This is a paragraph.</p>
-        <p>Qi</p>
-        
-    <!-- Custom vertical progress bar -->
-    <div class="meter-container">
-        <div class="meter">
-          <span style="height: 50%;"></span> <!-- Adjust height here to control progress -->
+      <div class="bg"></div>
+      <h1>Martial Odyssey</h1>
+
+      <!-- Progress Bar UI Elements -->
+      <div class="progress-container qi-bar">
+        <div class="progress">
+          <div class="progress__fill"></div>
+          <span class="progress__text">0%</span>
+        </div>
+        <span class="progress-label">Qi</span>
+      </div>
+
+      <div class="progress-container health-bar">
+        <div class="progress">
+          <div class="progress__fill"></div>
+          <span class="progress__text">0%</span>
+        </div>
+        <span class="progress-label">Health</span>
+      </div>
+
+      <div class="progress-container energy-bar">
+        <div class="progress">
+          <div class="progress__fill"></div>
+          <span class="progress__text">0%</span>
+        </div>
+        <span class="progress-label">Energy</span>
+      </div>
+
+      <div class="progress-container exp-bar">
+        <div class="progress">
+          <div class="progress__fill"></div>
+          <span class="progress__text">0%</span>
+        </div>
+        <span class="progress-label">Experience</span>
+      </div>
+
+
+      <!-- Button UI Elements -->
+      <div class="buttons">
+        <div id="explore-button">
+          <button type="button">Explore World</button>
+        </div>
+
+        <div id="breakthrough-button">
+          <button type="button">Breakthrough</button>
+        </div>
+
+        <div id="shop-button">
+          <button type="button">Shop</button>
+        </div>
+
+        <div id="options-button">
+          <button type="button">Options</button>
+        </div>
+
+        <div id="save-button">
+          <button type="button">Save Progress</button>
         </div>
       </div>
-    </div>
 
+
+      <div class="gold-display">
+        <span>Gold: <span id="gold-amount">100</span></span>
+      </div>
         
+      <div class="inventory">
+        <h3>Inventory</h3>
+        <ul>
+          <li>Pill of Strength</li>
+          <li>Talisman of Protection</li>
+        </ul>  
+      </div>
+
+
+      <div class="stats-display">
+        <p>Health: 100/100</p>
+        <p>Qi: 100/100</p>
+        <p>Strength: 1</p>
+        <p>Agility: 1</p>
+      </div>
+
+      <div class="event-log">
+        <h3>Event Log</h3>
+        <p>Found a hidden cave with treasures!</p>
+        <p>Defeated an enemy cultivator!</p>
+      </div>
+
+      <div class="timer">
+        <p>Time Cultivating: 02:30</p>
+      </div>
+
+      <div class="notification">
+        <p>You have reached Adept level in cultivation!</p>
+      </div>
+
+      <div class="quest-tracker">
+        <h3>Quests</h3>
+        <p>1. Explore the world and find a treasure.</p>
+        <p>2. Break through to the next cultivation realm.</p>
+      </div>
+
+      <div id="options-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeOptions()">&times;</span>
+          <h3>Options</h3>
+          <p>Sound: On/Off</p>
+          <p>Difficulty: Easy/Medium/Hard</p>
+        </div>
+      </div>
+      
+      <script src="js/scripts.js"></script>
     </body>
 </html>

@@ -120,3 +120,41 @@ h1, p {
   cursor: pointer;
 }
 /* ================================================== */
+
+
+
+/* General styles for all displays (inventory, event log, quest tracker) */
+.inventory, .event-log, .quest-tracker {
+  background-color: rgba(212, 212, 212, 0.5); /* Tinted background with transparency */
+  border: 2px solid rgba(0, 0, 0, 0.3); /* Semi-transparent border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 5px;
+  margin-top: 10px; /* Space above the box for the heading */
+  margin-bottom: 10px; /* Space between elements */
+  max-width: 300px; /* Optional: Limit the width of the containers */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  position: relative;
+}
+
+/* Heading styles to place them above the container box */
+.inventory-heading, .event-log-heading, .quest-heading {
+  color: #000; /* Bold black text */
+  font-weight: bold;
+  margin-bottom: -10px; /* Pull the heading closer to the box */
+  margin-left: 10px; /* Align with the box */
+  font-size: 18px; /* Adjust font size */
+}
+
+/* List styling */
+ul {
+  list-style-type: none; /* Removes default bullet points */
+  padding-left: 0;
+
+}
+
+ul li {
+  padding: 1px 0;
+  font-size: 14px;
+  color: rgb(0, 0, 0); /* Default text color */
+  font: bold;
+}

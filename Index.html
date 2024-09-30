@@ -70,18 +70,11 @@
       </div>
 
 
-      <div class="gold-display">
-        <span>Gold: <span id="gold-amount">100</span></span>
-      </div>
-        
-      <div class="inventory">
-        <h3>Inventory</h3>
-        <ul>
-          <li>Pill of Strength</li>
-          <li>Talisman of Protection</li>
-        </ul>  
-      </div>
 
+      <!-- Display UI Elements -->
+      <div class="gold-display">
+        <span>Gold: <span id="gold-amount">0</span></span>
+      </div>
 
       <div class="stats-display">
         <p>Health: 100/100</p>
@@ -89,12 +82,26 @@
         <p>Strength: 1</p>
         <p>Agility: 1</p>
       </div>
-
-      <div class="event-log">
-        <h3>Event Log</h3>
-        <p>Found a hidden cave with treasures!</p>
-        <p>Defeated an enemy cultivator!</p>
+      
+      <h3>Inventory</h3>
+      <div class="inventory">
+        
+        <ul id="inventory-list"></ul>
       </div>
+
+      <h3>Event Log</h3>
+      <div class="event-log">
+        
+        <ul id="event-log-list"></ul>
+      </div>
+
+      <h3>Quests</h3>
+      <div class="quest-tracker">
+        
+        <ul id="quest-list"></ul>
+      </div>
+      <!---------------------------------------->
+
 
       <div class="timer">
         <p>Time Cultivating: 02:30</p>
@@ -104,11 +111,7 @@
         <p>You have reached Adept level in cultivation!</p>
       </div>
 
-      <div class="quest-tracker">
-        <h3>Quests</h3>
-        <p>1. Explore the world and find a treasure.</p>
-        <p>2. Break through to the next cultivation realm.</p>
-      </div>
+
 
       <div id="options-modal" class="modal">
         <div class="modal-content">

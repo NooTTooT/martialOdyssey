@@ -197,3 +197,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+let eventLogArray = []; // Array to store event messages
+
+// Function to add an event to the log
+function addEventToLog(eventMessage) {
+    // Add the new event to the end of the array
+    eventLogArray.push(eventMessage);
+
+    // Limit the number of events (optional)
+    if (eventLogArray.length > 5) {
+        eventLogArray.shift(); // Remove the oldest event (first in the array)
+    }
+
+    // Update the UI to reflect the new event log
+    updateEventLogUI();
+}
+
+// Function to update the event log display in the UI
+function updateEventLogUI() {
+    const eventLogList = document.getElementById('event-log-list');
+    eventLogList.innerHTML = '';  // Clear the current event log display
+
+    // Loop through the event log array and display each event
+    eventLogArray.forEach(event => {
+        const listItem = document.createElement('li');
+        listItem.textContent = event;
+        eventLogList.appendChild(listItem);
+
+        // Use a short timeout to add the 'visible' class for the transition effect
+        setTimeout(() => {
+            listItem.classList.add('visible');
+        }, 100); // Delay slightly to trigger the transition
+    });
+}
+
+
+
+
+
